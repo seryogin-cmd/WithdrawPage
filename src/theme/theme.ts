@@ -2,9 +2,9 @@ import { createTheme } from "@mui/material/styles";
 
 const baseTheme = createTheme({
   palette: {
-    background: {
-      default: "#f3f3f3",
-      paper: "#fcd502",
+    backgroundCustom: {
+      primary: "#f3f3f3",
+      secondary: "#fcd502",
     },
     text: {
       primary: "#040b11",
@@ -81,7 +81,7 @@ export const theme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          backgroundColor: baseTheme.palette.background.default,
+          backgroundColor: baseTheme.palette.backgroundCustom.primary,
           padding: 4,
         },
       },
@@ -111,7 +111,7 @@ export const theme = createTheme({
           color: baseTheme.palette.text.primary,
           "&.Mui-checked": {
             svg: {
-              backgroundColor: baseTheme.palette.background.paper,
+              backgroundColor: baseTheme.palette.backgroundCustom.secondary,
               color: baseTheme.palette.text.primary,
               borderRadius: "50%",
             },
@@ -126,7 +126,7 @@ export const theme = createTheme({
           padding: 4,
           color: baseTheme.palette.grey[900],
           "&.Mui-checked": {
-            color: baseTheme.palette.background.paper,
+            color: baseTheme.palette.backgroundCustom.secondary,
           },
         },
       },

@@ -20,11 +20,28 @@ declare module "@mui/material/Typography" {
   }
 }
 
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface Palette {
-    white: Palette['primary'];
+    white: Palette["primary"];
   }
+  
   interface PaletteOptions {
-    white?: PaletteOptions['primary'];
+    white?: PaletteOptions["primary"];
+  }
+}
+
+declare module "@mui/material/styles" {
+  interface Palette {
+    backgroundCustom: {
+      primary: string;
+      secondary: string;
+    };
+  }
+
+  interface PaletteOptions {
+    backgroundCustom?: {
+      primary: string;
+      secondary: string;
+    };
   }
 }
