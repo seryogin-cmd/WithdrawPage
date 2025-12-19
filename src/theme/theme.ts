@@ -2,6 +2,10 @@ import { createTheme } from "@mui/material/styles";
 
 const baseTheme = createTheme({
   palette: {
+    background: {
+      default: "#f3f3f3",
+      paper: "#fcd502",
+    },
     text: {
       primary: "#040b11",
       secondary: "#8E8E93",
@@ -11,7 +15,7 @@ const baseTheme = createTheme({
     },
     white: {
       main: "#FFFFFF",
-      contrastText: "#040b11", // можно использовать для текста на белом фоне
+      contrastText: "#040b11",
     },
   },
 
@@ -77,7 +81,7 @@ export const theme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          backgroundColor: "#f3f3f3",
+          backgroundColor: baseTheme.palette.background.default,
           padding: 4,
         },
       },
@@ -86,7 +90,7 @@ export const theme = createTheme({
     MuiInputBase: {
       styleOverrides: {
         root: {
-          background: "#fff",
+          background: baseTheme.palette.white.main,
           borderRadius: 12,
           fontSize: 18,
           color: baseTheme.palette.text.primary,
@@ -107,7 +111,7 @@ export const theme = createTheme({
           color: baseTheme.palette.text.primary,
           "&.Mui-checked": {
             svg: {
-              backgroundColor: "#fcd502",
+              backgroundColor: baseTheme.palette.background.paper,
               color: baseTheme.palette.text.primary,
               borderRadius: "50%",
             },
@@ -122,7 +126,7 @@ export const theme = createTheme({
           padding: 4,
           color: baseTheme.palette.grey[900],
           "&.Mui-checked": {
-            color: "#fcd502",
+            color: baseTheme.palette.background.paper,
           },
         },
       },
@@ -158,16 +162,16 @@ export const theme = createTheme({
           borderRadius: 10,
           fontWeight: 400,
           border: "none",
-          color: "#040b11",
+          color: baseTheme.palette.text.primary,
           boxShadow: "none",
-          backgroundColor: "#fff",
+          backgroundColor: baseTheme.palette.white.main,
           "&:hover": {
             border: "none",
           },
         },
         contained: {
-          color: "#fff",
-          backgroundColor: "#040b11",
+          color: baseTheme.palette.white.main,
+          backgroundColor: baseTheme.palette.text.primary,
           pointerEvents: "none",
         },
       },
